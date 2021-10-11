@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio</title>
+<meta name="description" content="WebGL based transitions on scroll" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+<meta name="keywords" content="webgl, particles, shader, threejs, javascript, demo, web development" />
+<meta name="author" content="Codrops" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<script>
+		document.documentElement.className = 'js';
+		var supportsCssVars = function () {
+			var e,
+				t = document.createElement('style');
+			return (
+				(t.innerHTML = 'root: { --tmp-var: bold; }'),
+				document.head.appendChild(t),
+				(e = !!(
+					window.CSS &&
+					window.CSS.supports &&
+					window.CSS.supports('font-weight', 'var(--tmp-var)')
+				)),
+				t.parentNode.removeChild(t),
+				e
+			);
+		};
+		supportsCssVars() ||
+			alert('Please view this demo in a modern browser that supports CSS Variables.');
+	</script>
+</head>
+
+<body>
+<main>
+  <div class="frame">
+    <div class="frame__title-wrap"> </div>
+  </div>
+  <div class="content content--canvas">
+    <div class="header">
+      <h1 class="header__title">Nerses Muradjan</h1>
+      <p>Web developer & Designer</p>
+      <div class="aniWrap">
+        <div class="mouse">
+          <div class="scroller"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="heading">
+      <h1 class="header__title2">Over mij</h1>
+      <p class="header__text">Ik ben een gedreven vormgever met een frisse blik op de moderne vormgeving. Een
+        paar sterke punten van mij zijn dat ik flexibel ben,
+        sociaal ben en goed kan samenwerken met collega’s. Ook ben ik erg leergierig en sta ik altijd open
+        voor nieuwe uitdagingen.</p>
+    </div>
+    <div class="heading">
+      <h1 class="header__title2">Skills</h1>
+      <!-- partial:index.partial.html -->
+      <div class="container"></div>
+      <div class="bar learning" data-skill="CMS Kirby"></div>
+      <div class="bar back basic" data-skill="Adobe XD"></div>
+      <div class="bar back intermediate" data-skill="Illustrator / Photoshop / Indesign"></div>
+      <div class="bar front advanced" data-skill="Visual Studio Code"></div>
+      <div class="bar front expert" data-skill="WordPress"></div>
+    </div>
+    <!-- partial -->
+    <link rel="stylesheet" href="/css/skills.css">
+  </div>
+  <div class="heading">
+    <h1 class="header__title2">Portfolio</h1>
+    <img src="/img/NSlogoReveal.gif" alt="NerrieServer">
+    <p class="header__text"><a href="https://www.nerrieserver.nl/">Bekijk project</a></p>
+  </div>
+  <div class="heading">
+    <h1 class="header__title2">Contact</h1>
+    <p>Heb jij een uitdagend project voor mij? <br>
+      Mail dan naar <a href="mailto:info@nerrieserver.nl">info@nerrieserver.nl</a> </p>
+    <div class="footer-social-icons">
+      <ul class="social-icons">
+        <li><a href="https://www.linkedin.com/in/nersesmuradjan/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+<script src="https://unpkg.com/three@0.102.1/build/three.min.js"></script> 
+<script src="https://unpkg.com/three.phenomenon@1.1.0/dist/three.phenomenon.umd.js"></script> 
+<script src="https://unpkg.com/uos@1.1.1/dist/uos.umd.js"></script> 
+<script src="js/bundle.umd.js"></script>
+</body>
+</html>
